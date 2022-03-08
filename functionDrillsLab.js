@@ -12,8 +12,11 @@
 */
 
 //CODE HERE
+function helloWorld() {
+  console.log('Hello, World!')
 
-
+}
+helloWorld()
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
@@ -21,9 +24,8 @@
 */
 
 //CODE HERE
-
-
-////////////////// PROBLEM 3 ////////////////////
+const jsNinja = () => 'I am a JavaScript ninja!'
+console.log(jsNinja())
 /*
   Create a function called printName which takes in a person's name and console logs it.
   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
@@ -31,7 +33,11 @@
 */
 
 //CODE HERE
-
+function printName (){
+  let printName = 'Marquis'
+  return printName
+}
+console.log(printName())
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -45,8 +51,11 @@
 */
 
 //CODE HERE
-
-
+const greeting = (name) => {
+  console.log(`Hello, ${name}`)
+}
+greeting('Marquis')
+greeting('Amro')
 ////////////////// PROBLEM 5 ////////////////////
 
 /*
@@ -59,7 +68,14 @@
 */
 
 //CODE HERE
-
+const compareNums = (num1, num2) => {
+if (num1 === num2) {
+  return num1
+} else {
+  return Math.max(num1, num2)
+}
+}
+console.log(compareNums(4,4))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -70,7 +86,13 @@
 */
 
 //CODE HERE
-
+function add (param1, param2){
+  let num1 = Number(param1)
+  let num2 = Number(param2)
+  return num1 + num2 
+}
+let sum = add(5,9)
+console.log(sum)
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -85,7 +107,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-// expression
+'expression'
 
 
 
@@ -100,7 +122,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+"arrow"
 // declaration
 // expression
 
@@ -110,7 +132,8 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
-
+const exclaimThree = str => `${str.toUpperCase()}  '!!!'`
+console.log(exclaimThree("john"))
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -125,7 +148,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+'declaration'
 // expression
 
 
@@ -139,7 +162,17 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+const nameCheck = (name) => {
+  if (name === 'Steven'){
+  return 'What is up Steven?'
+  } else if (name === 'Bryan'){
+  return 'Hey Bryan!'
+} else {
+  return `Cool name, ${name}`
+}
+}
+let nameGreeting = nameCheck('Marquis')
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -152,10 +185,23 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+const faveColorFinder = (color) => {
+  if (color === 'red'){
+  return 'red is a great color'
+  } else if (color === 'green'){
+  return 'green is a solid favorite color'
+  } else if (color === 'black'){
+  return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+}
+}
+let colorRating = faveColorFinder('blue')
+console.log(colorRating)
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
+let namesArr2 = [' Amro', 'Danny', 'Marquis', 'Andrew']
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
@@ -163,8 +209,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
-
+const printAllNames = (arr) => {
+  for (let i = 0; i < arr.length; i++)
+  console.log(arr[i]);
+}
+printAllNames(namesArr)
+printAllNames(namesArr2)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -174,8 +224,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
-
+const thatsOdd = (number) => {
+  if (number % 2 == 0){
+  return `That's not odd!`
+  } else {
+    return 'That is odd indeed!'
+  }
+}
+let oddChecker = thatsOdd('6')
+console.log(oddChecker)
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -187,7 +244,10 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+const bestMovie = (title) => {
+  return `${title} is the best movie ever!`
+  } 
+console.log(bestMovie('Batman'))
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -201,8 +261,17 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-
-
+const bigOrSmall = (arr) => {
+let answers = []
+let arrayEvaluator = arr[i]
+for (let i = 0; i < arr.length; i++)
+if (arr > 100){
+  answers.push('big')
+} else if (arr <= 100){
+  answers.push('small')
+}
+}
+console.log(answers)
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
